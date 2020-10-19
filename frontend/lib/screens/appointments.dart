@@ -8,7 +8,6 @@ import 'package:frontend/screens/appointmentdetail.dart';
 import 'dart:convert';
 import 'package:intl/intl.dart';
 import 'package:frontend/main.dart';
-import 'package:frontend/screens/appointmentlist.dart';
 
 class Appointments extends StatefulWidget {
   @override
@@ -131,8 +130,8 @@ class _AppointmentsState extends State<Appointments>
                 color: Colors.black,
                 onPressed: () {
                   setState(() {});
-                  /* Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MainPage()));*/
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MainPage()));
                 }),
             centerTitle: true,
             title: Text("Appointment", style: TextStyle(color: Colors.black)),
@@ -146,13 +145,7 @@ class _AppointmentsState extends State<Appointments>
                   width: 50, // specific value
                   child: FlatButton(
                     padding: const EdgeInsets.all(5.0),
-                    onPressed: () {
-                      setState(() {});
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => AppointmentList()));
-                    },
+                    onPressed: () {},
                     child: Ink.image(
                       image: AssetImage('assets/images/list.png'),
                     ),
@@ -347,11 +340,11 @@ class _AppointmentsState extends State<Appointments>
                                     : Icon(Icons.arrow_right),
                                 onTap: () {
                                   setState(() {});
-                                  /* Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                AppointmentDetail(event)));*/
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              AppointmentDetail(event)));
                                 },
                               )
                             : null))

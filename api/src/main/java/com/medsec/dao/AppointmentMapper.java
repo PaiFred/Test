@@ -24,12 +24,6 @@ public interface AppointmentMapper {
             @Param("until")  String until,
             @Param("status") AppointmentStatus status);
 
-    List<Appointment> getThirtyDaysAppointmentsByUserId(
-            @Param("uid")  String uid,
-            @Param("since")  String since,
-            @Param("until")  String until,
-            @Param("status") AppointmentStatus status);
-       
     void updateUserNoteById(Appointment appointment);
 
     void updateStatusById(Appointment appointment);
